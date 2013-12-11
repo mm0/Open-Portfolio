@@ -1,0 +1,25 @@
+upstream my_site {
+        server 127.0.0.1:8080;
+} 
+server {
+listen   0.0.0.0:80;
+  server_name  <%= node['nginx']['hostname'] %>;
+  access_log  <%= node['nginx']['log_dir'] %>/localhost.access.log;
+
+  location / {
+    index  index.html index.htm;
+			proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-NginX-Proxy true;
+            proxy_pass http://my_site/;
+            proxy_redirect off;
+
+  }
+	 location ~* .*\.(jpg|jpeg|gif|png|ico|css|zip|tgz|gz|rar|bz2|pdf|txt|tar|wav|bmp|rtf|js|flv|swf|html|htm)$ {
+            access_log off;
+            expires max;
+		    root   <%= node['nginx']['www_root'] %>;
+        }
+
+}

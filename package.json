@@ -1,0 +1,35 @@
+{
+    "name"        : "Open Portfolio",
+    "description" : "Backbone Node.js on the backend, Boostrap on the frontend for a simple website/portfolio",
+    "version"     : "1.0.0",
+    "author"      : "Matt Margolin <matt.margolin@gmail.com>",
+    "engines"     : {
+      "node": ">=0.6.x"
+    },
+    "dependencies": {
+      "async"           : "0.1.x",
+      "backbone"        : "*",
+      "colors"          : "*",
+      "connect"         : "2.1.x",
+      "connect-timeout" : "0.0.1",
+      "jake"	        : "*",
+      "express"         : "2.x.x",
+      "moment"          : "1.6.x",
+      "uglify-js"       : "1.2.x",
+      "underscore"      : "*",
+      "sendmail"	    : "*",
+      "zepto"		    : "*",
+      "gzippo"          : "0.1.4",
+      "requirejs"       : "2.0.2"
+    },
+    "devDependencies": {
+      "mocha"   : "1.1.x",
+      "should"  : "0.6.x",
+      "request" : "2.9.x"
+    },
+    "scripts": {
+      "test"        : "node_modules/.bin/mocha --ui bdd --recursive --reporter spec --timeout 10000 --slow 300",
+      "postinstall" : "jake -v || npm install jake@0.2.23 -g",
+      "start"       : "NODE_ENV=production node app.js"
+    }
+}

@@ -1,0 +1,11 @@
+{ 
+	"PORT" 			: 8080,
+	"REQ_TIMEOUT" 	: 10,
+	"controllers" 	: ["contact","projects"],
+	"controller_suffix" : "_controller",
+	"build_script"	:	"./lib/assetBuilder.js",
+	"directories" 	: {
+		"controllers":"./app/controllers/"
+	},
+	"mail_to_email" : "my.email.address@email.com"
+}

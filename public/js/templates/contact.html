@@ -1,0 +1,74 @@
+	<br/>
+	<div class="col-xs-12">
+		<span style="min-width:6em;display:inline-block"> Telephone: </span>
+				<a href='tel:+16465439673'>646-543-9673</a>
+	</div> 
+	<div class="col-xs-12">
+		<span style="min-width:6em;display:inline-block"> Email: </span>
+				<a href='mailto:matt.margolin@gmail.com'>matt.margolin@gmail.com </a>
+	</div>
+	<br/>
+	<br/>
+	<div class="col-xs-12">
+	<div class="text-center lead"><!--<div class='icon-hand-down icon-large'></div>-->Send me a message:</div>
+	<br/>
+	<form method="POST" action="/contact_submit" id="contact_form">
+		<div class="row">
+			<div class="col-xs-2">
+			<label for="contact_name">Name:</label>
+			</div>
+			<div class="col-xs-10">
+				<input type="text" name="contact_name" />
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-xs-2">
+				<label for="contact_email">Email:</label>
+			</div>
+			<div class="col-xs-10">
+				<input type="text" name="contact_email" />
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-xs-2">
+				<label for="contact_subject">Subject:</label>
+			</div>
+			<div class="col-xs-10">
+				<input type="text" name="contact_subject" />
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-xs-2">
+				<label for="contact_message">Message:</label>
+			</div>
+			<div class="col-xs-10">
+				<textarea name="contact_message"></textarea>
+			</div>
+		</div>
+		<br/>
+		<div class="row pull-right">
+		  </div>
+	</form>
+			<a href="#contactModal" data-toggle="modal" type="button" id="contact_submit" class="pull-right btn btn-primary ">
+				  <i class="icon-envelope icon-white"></i> Submit
+			  </a>
+</div>
+<div class="modal fade" role="dialog" id="contactModal" aria-hidden="true">
+	<div class="modal-dialog">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<a class="close" data-dismiss="modal">×</a>
+		<h4>Contact</h4>
+	  </div>
+	  <div class="modal-body">
+	  </div>
+	  <div class="modal-footer">
+		<a href="#contactModal" data-dismiss="modal" class="btn btn-primary">OK</a>
+	  </div>
+  </div>
+  </div>
+  </div>
+

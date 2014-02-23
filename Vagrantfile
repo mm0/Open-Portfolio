@@ -2,12 +2,14 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
+#Vagrant.configure("2") do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "centos5.9"
+    config.vm.box = "centos5.9"
+	#config.vm.forward_port "ssh",22,1234
 	config.vm.network :hostonly, "3.3.3.3"
 	config.vm.share_folder "chef-data","/var/www/nginx-default","./" 
 #	config.vm.share_folder "chef-cache",
